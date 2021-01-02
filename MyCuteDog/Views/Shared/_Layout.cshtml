@@ -1,43 +1,255 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Momo | Cute Dog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i%7CRaleway:400,700" rel="stylesheet">
+    <!-- Css -->
+    <link rel="stylesheet" href="@Url.Content("~/")Content/templateFiles/bootstrap.min.css" />
+    <link rel="stylesheet" href="@Url.Content("~/")Content/templateFiles/magnific-popup.css" />
+    <link rel="stylesheet" href="@Url.Content("~/")Content/templateFiles/font-icons.css" />
+    <link rel="stylesheet" href="@Url.Content("~/")Content/templateFiles/sliders.css" />
+    <link rel="stylesheet" href="@Url.Content("~/")Content/templateFiles/style.css" />
+    <link rel="stylesheet" href="@Url.Content("~/")Content/templateFiles/responsive.css" />
+    <link rel="stylesheet" href="@Url.Content("~/")Content/templateFiles/spacings.css" />
+    <!-- Favicons -->
+    @*icon來源https://iconarchive.com/show/outline-icons-by-iconsmind/Dog-icon.html*@
+    <link rel="shortcut icon" href="@Url.Content("~/")Images/Ico-Outline-Dog.ico">
+    <link rel="apple-touch-icon" href="@Url.Content("~/")Images/Ico-Outline-Dog.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="@Url.Content("~/")Images/Ico-Outline-Dog_72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="@Url.Content("~/")Images/Ico-Outline-Dog_128x128.png">
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("應用程式名稱", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
-                    <li>@Html.ActionLink("關於", "About", "Home")</li>
-                    <li>@Html.ActionLink("連絡人", "Contact", "Home")</li>
-                </ul>
-            </div>
+<body class="relative">
+    <!-- Preloader -->
+    <div class="loader-mask">
+        <div class="loader">Loading...</div>
+    </div>
+    <!-- Sidenav -->
+    <section class="sidenav">
+        <div class="logo-wrap">
+            <a href="index.html">
+                <img class="logo-dark" src="@Url.Content("~/")Images/logo_dark.png" alt="logo">
+            </a>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+        <p class="mt-20">
+            與你我分享我家的小笨狗Momo
+        </p>
+        <h6 class="mt-40">相關連結</h6>
+        <ul class="links-list">
+            <li>
+                <a href="about-us.html">關於我們</a>
+            </li>
+            <li>
+                <a href="services.html">服務</a>
+            </li>
+            <li>
+                <a href="blog-standard.html">部落格</a>
+            </li>
+            <li>
+                <a href="contact.html">聯絡我們</a>
+            </li>
+        </ul>
+        <h6 class="mt-40">Stay in Touch</h6>
+        <p>
+            Email:
+            <a href="mailto:zheforwork@gmail.com">zheforwork@gmail.com</a>
+        </p>
+        <p>
+            Phone:
+            <a href="tel:+886-0912-345-678">+886-0912-345-678</a>
+        </p>
+        <div class="social-icons rounded mt-40">
+            <a href="https://github.com/ts6075/My-Cute-Dog-MoMo"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </section> <!-- end sidenav -->
+    <div class="main-wrapper">
+        <header class="nav-type-1 transparent">
+            <nav class="navbar navbar-static-top">
+                <div class="navigation">
+                    <div class="container relative">
+                        <div class="row">
+                            <div class="navbar-header">
+                                <!-- Logo -->
+                                <div class="logo-container">
+                                    <div class="logo-wrap">
+                                        <a href="index.html">
+                                            <img class="logo" src="@Url.Content("~/")Images/logo_light.png" alt="logo">
+                                            <img class="logo-dark" src="@Url.Content("~/")Images/logo_dark.png" alt="logo">
+                                        </a>
+                                    </div>
+                                </div>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div> <!-- end navbar-header -->
+                            <div class="col-md-12 nav-wrap">
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="dropdown">
+                                            <a href="#">Home</a>
+                                            <i class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"></i>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="index.html">Hero Image</a>
+                                                </li>
+                                                <li>
+                                                    <a href="index-slider.html">Slider</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Pages</a>
+                                            <i class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"></i>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="services.html">服務</a>
+                                                </li>
+                                                <li>
+                                                    <a href="about-us.html">關於我們</a>
+                                                </li>
+                                                <li>
+                                                    <a href="contact.html">聯絡我們</a>
+                                                </li>
+                                                <li>
+                                                    <a href="typography.html">版型</a>
+                                                </li>
+                                                <li>
+                                                    <a href="404.html">404</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Portfolio</a>
+                                            <i class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"></i>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="portfolio-4-col.html">4 Columns</a>
+                                                </li>
+                                                <li>
+                                                    <a href="portfolio-3-col.html">3 Columns</a>
+                                                </li>
+                                                <li>
+                                                    <a href="portfolio-2-col.html">2 Columns</a>
+                                                </li>
+                                                <li>
+                                                    <a href="portfolio-single.html">Single Project</a>
+                                                </li>
+                                                <li>
+                                                    <a href="portfolio-single-2.html">Single Project 2</a>
+                                                </li>
+                                            </ul>
+                                        </li> <!-- end portfolio -->
+                                        <li class="dropdown">
+                                            <a href="#">Blog</a>
+                                            <i class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"></i>
+                                            <ul class="dropdown-menu menu-right">
+                                                <li>
+                                                    <a href="blog-standard.html">Standard</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-masonry.html">Masonry</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-single.html">Single Post</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-icon-trigger hidden-sm hidden-xs">
+                                            <a href="#" id="nav-icon">
+                                                <div class="nav-icon-inner">
+                                                    <div class="nav-icon-wrap">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul> <!-- end menu -->
+                                </div> <!-- end collapse -->
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                    </div> <!-- end container -->
+                </div> <!-- end navigation -->
+            </nav> <!-- end navbar -->
+        </header>
+        <div class="content-wrapper oh">
+            @RenderBody()
+            <!-- Footer Type-1 -->
+            <footer class="footer footer-type-1 bg-dark">
+                <div class="container">
+                    <div class="footer-widgets">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="widget footer-get-in-touch">
+                                    <h5 class="uppercase">住址</h5>
+                                    <address class="footer-address">台灣OO市中正路123號</address>
+                                </div>
+                            </div> <!-- end address -->
+                            <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12">
+                                <div class="widget footer-get-in-touch">
+                                    <h5 class="uppercase">住址</h5>
+                                    <address class="footer-address">台灣OO市中山路999號</address>
+                                </div>
+                            </div> <!-- end address -->
+                            <div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-12 last">
+                                <div class="widget footer-get-in-touch">
+                                    <h5 class="uppercase">Stay in Touch</h5>
+                                    <p>
+                                        Email:
+                                        <a href="mailto:zheforwork@gmail.com">zheforwork@gmail.com</a>
+                                    </p>
+                                    <p>
+                                        Phone:
+                                        <a href="tel:+886-0912-345-678">+886-0912-345-678</a>
+                                    </p>
+                                </div>
+                            </div> <!-- end stay in touch -->
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+                <div class="bottom-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 footer-socials">
+                                <div class="social-icons transparent sm-text-center">
+                                    <a href="https://github.com/ts6075/My-Cute-Dog-MoMo"><i class="fa fa-github"></i></a>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-sm-offset-2 copyright text-right sm-text-center">
+                                <span>
+                                    © 2021 寵物日誌, Made by Nick.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end bottom footer -->
+            </footer> <!-- end footer -->
+            <div id="back-to-top">
+                <a href="#top"><i class="fa fa-angle-up"></i></a>
+            </div>
+        </div> <!-- end content wrapper -->
+    </div> <!-- end main wrapper -->
+    <!-- jQuery Scripts -->
+    @*@Scripts.Render("~/bundles/jquery")*@
+    <script type="text/javascript" src="@Url.Content("~/")Scripts/templateFiles/jquery.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/")Scripts/templateFiles/bootstrap.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/")Scripts/templateFiles/plugins.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/")Scripts/templateFiles/scripts.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
